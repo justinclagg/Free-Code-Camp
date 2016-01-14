@@ -8,6 +8,8 @@ In this repository I will be adding my work from [freecodecamp.com](www.freecode
 3. jQuery
 4. Basic JavaScript
 5. Object Oriented and Functional Programming
+6. Basic Algorithm Scripting
+7. Basic Front End Development Projects
 
 ### Currently Working On:
-- Basic Algorithm Scripting
+- Intermediate Algorithm Scripting
