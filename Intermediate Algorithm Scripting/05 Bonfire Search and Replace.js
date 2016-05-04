@@ -1,5 +1,5 @@
 /* 
-Bonfire: Search and Replaced
+Bonfire: Search and Replace
 http://www.freecodecamp.com/challenges/search-and-replace
 
 Perform a search and replace on the sentence using the arguments provided and return the new sentence.
