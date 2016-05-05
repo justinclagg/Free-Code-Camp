@@ -8,12 +8,22 @@ https://github.com/justinclagg
 */
 
 function factorialize(num) {
-  // Return the factorial of num
-  var factorial = 1;
-  for (var n = 2; n <= num; n++) {
-    factorial *= n;
-  }
-  return factorial;
+  
+    var total = 1;
+  
+    if (num < 0) {   
+        return "You must select a positive integer.";
+    
+    } else if (num === 0) {  
+        return 1;
+    
+    } else {  
+
+        for (var i = 1; i <= num; i++) {
+            total *= i;
+        }
+        return total;
+    } 
 }
 
-factorialize(1);
+factorialize(6);
