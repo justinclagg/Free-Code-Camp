@@ -2,9 +2,11 @@
 Sorted Union
 https://www.freecodecamp.com/challenges/sorted-union
 
-Write a function that takes two or more arrays and returns a new array of unique values in the order of the original provided arrays.
+Write a function that takes two or more arrays and returns a new array 
+of unique values in the order of the original provided arrays.
 
-In other words, all values present from all arrays should be included in their original order, but with no duplicates in the final array.
+In other words, all values present from all arrays should be included in
+their original order, but with no duplicates in the final array.
 
 Code by Justin Clagg
 https://github.com/justinclagg
