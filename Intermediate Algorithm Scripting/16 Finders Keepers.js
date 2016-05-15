@@ -1,0 +1,17 @@
+/* 
+Finders Keepers
+https://www.freecodecamp.com/challenges/finders-keepers
+
+Create a function that looks through an array (first argument) and returns 
+the first element in the array that passes a truth test (second argument).
+
+Code by Justin Clagg
+https://github.com/justinclagg
+*/
+
+function findElement(arr, func) {
+	// Retuns the first element of the array filted by the callback func
+	return arr.filter(func)[0];
+}
+
+findElement([1, 2, 3, 4], function(num){ return num % 2 === 0; });
