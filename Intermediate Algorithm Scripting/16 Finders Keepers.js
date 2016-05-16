@@ -10,8 +10,14 @@ https://github.com/justinclagg
 */
 
 function findElement(arr, func) {
-	// Retuns the first element of the array filted by the callback func
-	return arr.filter(func)[0];
+	// Returns the first element in arr that satisfies func
+	for (var i = 0; i < arr.length; i++) {
+		if (func(arr[i]) === true) {
+			return arr[i];
+		}
+	}
+	// Return undefined if no elements satisfy func
+	return undefined;
 }
 
 findElement([1, 2, 3, 4], function(num){ return num % 2 === 0; });
