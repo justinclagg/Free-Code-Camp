@@ -10,7 +10,7 @@ In this repository I will be adding my work from [freecodecamp.com](www.freecode
 5. ~~Basic JavaScript~~
 6. ~~Object Oriented and Functional Programming~~
 7. ~~Basic Algorithm Scripting~~
-8. JSON APIs and Ajax
+8. ~~JSON APIs and Ajax~~
 9. Intermediate Front End Development Projects
 10. Intermediate Algorithm Scripting
 11. Advanced Algorithm Scripting
