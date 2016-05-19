@@ -12,6 +12,6 @@ In this repository I will be adding my work from [freecodecamp.com](www.freecode
 7. ~~Basic Algorithm Scripting~~
 8. ~~JSON APIs and Ajax~~
 9. Intermediate Front End Development Projects
-10. Intermediate Algorithm Scripting
+10. ~~Intermediate Algorithm Scripting~~
 11. Advanced Algorithm Scripting
 12. Advanced Front End Development Projects
