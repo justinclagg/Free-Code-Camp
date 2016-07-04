@@ -9,7 +9,6 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script type="text/javascript" src="script.js" defer></script>
 <body>
-
 	<h1>Simon</h1>
 	<div class="flex-row">
 		<div id="green" class="square"></div>
@@ -19,9 +18,10 @@
 		<div id="yellow" class="square"></div>
 		<div id="blue" class="square"></div>
 	</div>
-	<div id="buttons" class="flex-row">
-		<button id="startBtn">Start</button>
-		<button id="resetBtn">Reset</button>
+	<div class="flex-row button-row">
+		<button id="startBtn" class="mode-buttons">Start</button>
+		<button id="resetBtn" class="mode-buttons">Reset</button>
+		<button id="strictBtn" class="mode-buttons">Strict</button>
 	</div>
 	<div class="round-number">Round <span id="roundNum">1</span></div>
 </body>

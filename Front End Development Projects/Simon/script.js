@@ -87,11 +87,10 @@ function playSequence() {
 function animateButton(key) {
 	sounds[key].play();
 	buttons[key].style.opacity = "1";
-	setTimeout(function(){buttons[key].style.opacity = "0.6"}, 300);
+	setTimeout(function unclick(){buttons[key].style.opacity = "0.6"}, 300);
 }
 
 function userClick(key) {
-	console.log(gameState.sequence);
 	animateButton(key);
 	// The sequence was completed successfully
 	if (key === gameState.sequence[gameState.userStep] && gameState.userStep === gameState.sequence.length - 1) {
@@ -128,4 +127,3 @@ function winner() {
 	gameState.status = "off";
 	newGame();
 }
-
