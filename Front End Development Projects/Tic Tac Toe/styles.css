@@ -53,6 +53,7 @@ h1 {
 .winning-square__user:hover {
   background-color: green;
 }
+
 .winning-square__comp,
 .winning-square__comp:hover {
   background-color: red;
