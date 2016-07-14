@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Tic Tac Toe</title>
-  <meta name="description" content="Play tic tac toe against the computer.">
-    <meta name="author" content="Justin Clagg">
+	<title>Tic Tac Toe</title>
+  	<meta name="description" content="Play tic tac toe against the computer.">
+	<meta name="author" content="Justin Clagg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <script type="text/javascript" src="script.js" defer></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" async></script>
 </head>
 <body>
+  <!-- Navigation bar -->
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <!-- Display after navbar collapse -->
@@ -43,21 +44,22 @@
       </div>
     </div>
   </nav>
+  <!-- Tic tac toe squares -->
   <div class="contents">
     <div class="flex-row">
+      <div id="square-0" class="square"></div>
       <div id="square-1" class="square"></div>
       <div id="square-2" class="square"></div>
-      <div id="square-3" class="square"></div>
     </div>
     <div class="flex-row">
+      <div id="square-3" class="square"></div>
       <div id="square-4" class="square"></div>
       <div id="square-5" class="square"></div>
-      <div id="square-6" class="square"></div>
     </div>
     <div class="flex-row">
+      <div id="square-6" class="square"></div>
       <div id="square-7" class="square"></div>
       <div id="square-8" class="square"></div>
-      <div id="square-9" class="square"></div>
     </div>
   </div>
 </body>
