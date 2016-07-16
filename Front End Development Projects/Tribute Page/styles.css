@@ -1,0 +1,87 @@
+
+body {
+	background-color: #BBB;
+	font-family: "Alegreya Sans", sans-serif;
+}
+
+#menu {
+	background-color: transparent;
+	margin-top: 210px;
+}
+
+#menu h1 {
+	color: #FFF;
+	font-size: 70px;
+	font-weight: 100;
+	letter-spacing: 0.05em;
+	padding-left: 7px;
+}
+
+#menu hr {
+    border: 1px solid #FFF;
+	max-width: 350px;
+	margin-top: 0px;
+}
+
+@keyframes slide_to_top {
+    100% {
+        transform: translate(0px, -180px);
+    }
+}
+
+.menu-raised {
+    animation-name: slide_to_top;
+    animation-duration: 1500ms;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-delay: 0;
+    animation-fill-mode: forwards;
+}
+
+#tabs {
+	color: #FFF;
+}
+
+#tabs a,
+#tabs a:hover {
+	color: #FFF;
+	text-decoration: none;
+	font-weight: 300;
+}
+
+#tabs .vr {
+	font-weight: 100;
+}
+
+@keyframes fade_in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.panel {
+	display: none;
+	position: static;
+	margin: 0 auto;
+	margin-top: 30px;
+	max-width: 800px;
+	padding: 15px 30px;
+	color: black;
+	font-size: 17px;
+	font-weight: 300;
+	letter-spacing: 0.04em;
+}
+
+.active-panel {
+	display: block !important;
+	animation-name: fade_in;
+	animation-duration: 400ms;
+	animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-delay: 0;
+}
