@@ -1,14 +1,3 @@
-<!-- 
-	Tribute page ideas:
-		* Design:
-			~ Several quotes
-			~ Include text from original works
-			~ Multiple tabs or sections that appear
-			~ Interactive timeline, show influence of their work even past their death
-		* Cool Examples:
-			~ http://codepen.io/r_christian/full/adMYZp/ (minimalist, tabs)
-			~ http://codepen.io/FullStackFool/full/QEWozY/ (interactive timeline)
--->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,19 +11,24 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script type="text/javascript" src="script.js" defer></script>
 </head>
-<body class="container">
-	<div class="text-center" id="menu">
+<body>
+	<div class="container text-center wrapper" id="menu">
 		<h1>ARISTOTLE</h1>
 		<hr>
 		<div id="tabs">
 			<h2><a id="life" href="#">Life</a><span class="vr"> | </span><a id="work" href="#">Work</a><span class="vr"> | </span><a id="legacy" href="#">Legacy</a></h2>
 		</div>
 		<div id="life-panel" class="panel">
+			<blockquote>
+				<p>Knowing yourself is the beginning of all wisdom.</p>
+				<footer>Aristotle</footer>
+			</blockquote>
 			<p>Aristotle, whose name means "the best purpose", was born in 384 BC in Stagira, Chalcidice, 
 				about 55 km (34 miles) east of modern-day Thessaloniki. His father Nicomachus was the personal 
 				physician to King Amyntas of Macedon.</p>
 			<p>At about the age of eighteen, Aristotle moved to Athens to continue his education at Plato's 
 				Academy. He remained there for nearly twenty years before leaving Athens in 348/47 BC.</p>
+			<img id="aristotle-portrait" class="img-responsive" src="http://www.justinclagg.com/img/aristotle.png" alt="aristotle" height="150" width="150">					
 			<p>Aristotle was invited by Philip II of Macedon to become the tutor to his son Alexander in 343 BC.
 				Aristotle was appointed as the head of the royal academy of Macedon. During that time he gave 
 				lessons not only to Alexander, but also to two other future kings: Ptolemy and Cassander.</p>
@@ -46,15 +40,87 @@
 				and Eurymedon the Hierophant reportedly denounced Aristotle for impiety, prompting him to flee to 
 				his mother's family estate in Chalcis, at which occasion he was said to have stated: "I will not allow 
 				the Athenians to sin twice against philosophy" – a reference to Athens's prior trial and execution 
-				of Socrates. He died in Euboea of natural causes later that same year</p>
+				of Socrates. He died in Euboea of natural causes later that same year.</p>
+			<a href="https://en.wikipedia.org/wiki/Aristotle" target="_blank">(Read more)</a>
 		</div>
 		<div id="work-panel" class="panel">
+			<blockquote>
+				<p>For the things we have to learn before we can do, we learn by doing.</p>
+				<footer>Aristotle</footer>
+			</blockquote>
 			<p>Aristotle not only studied almost every subject possible at the time, but made significant contributions 
 				to most of them. His combined works constitute a virtual encyclopedia of Greek knowledge.</p>
+			<div id="work-headings">
+				<a href="#" id="philosophy">
+					<img src="http://www.justinclagg.com/img/philosophy_icon.png" alt="philosophy" height="25" width="25">
+					Philosophy
+				</a>
+				<a href="#" id="biology">
+					<img src="http://www.justinclagg.com/img/biology_icon.png" alt="biology" height="25" width="25">					
+					Biology 
+				</a>
+				<a href="#" id="physics">
+					<img class="active-icon" src="http://www.justinclagg.com/img/physics_icon.png" alt="physics" height="25" width="25">
+					Physics
+				</a>
+				<a href="#" id="logic">
+					<img src="http://www.justinclagg.com/img/logic_icon.png" alt="logic" height="25" width="25">					
+					Logic
+				</a>
+				<a href="#" id="psychology">
+					<img src="http://www.justinclagg.com/img/psychology_icon.png" alt="psychology" height="25" width="25">
+					Psychology
+				</a>
+			</div>
+			<div id="physics-dropdown" class="active-dropdown dropdown well">
+				<p>Aristotle suggested that the reason for anything coming about can be attributed to four different types 
+					of simultaneously active causal factors:</p>
+				<ul>
+					<li>Material cause describes the material out of which something is composed. Thus the material cause of 
+						a table is wood, and the material cause of a car is rubber and steel. It is not about action. It does 
+						not mean one domino knocks over another domino.</li>
+					<li>The formal cause is its form, i.e., the arrangement of that matter. It tells us what a thing is, that 
+						any thing is determined by the definition, form, pattern, essence, whole, synthesis or archetype. It 
+						embraces the account of causes in terms of fundamental principles or general laws, as the whole (i.e., 
+						macrostructure) is the cause of its parts, a relationship known as the whole-part causation. Plainly put, 
+						the formal cause is the idea existing in the first place as exemplar in the mind of the sculptor, and in 
+						the second place as intrinsic, determining cause, embodied in the matter. Formal cause could only refer 
+						to the essential quality of causation. A simple example of the formal cause is the mental image or idea 
+						that allows an artist, architect, or engineer to create his drawings.</li>
+					<li>The efficient cause is "the primary source", or that from which the change under consideration proceeds. 
+						It identifies 'what makes of what is made and what causes change of what is changed' and so suggests all 
+						sorts of agents, nonliving or living, acting as the sources of change or movement or rest. Representing 
+						the current understanding of causality as the relation of cause and effect, this covers the modern 
+						definitions of "cause" as either the agent or agency or particular events or states of affairs. So, take 
+						the two dominoes, this time of equal weighting, the first is knocked over causing the second also to fall over.</li>
+					<li>The final cause is its purpose, or that for the sake of which a thing exists or is done, including both 
+						purposeful and instrumental actions and activities. The final cause or teleos is the purpose or function 
+						that something is supposed to serve. This covers modern ideas of motivating causes, such as volition, need, 
+						desire, ethics, or spiritual beliefs.</li>
+				</ul>
+			</div>
+			<div id="biology-dropdown" class="dropdown well">test</div>
+			<div id="logic-dropdown" class="dropdown well">test</div>
+			<div id="philosophy-dropdown" class="dropdown well">test</div>
+			<div id="psychology-dropdown" class="dropdown well">test</div>
+			
 		</div>
 		<div id="legacy-panel" class="panel">
-
+			<blockquote>
+				<p>All persons ought to endeavor to follow what is right, and not what is established.</p>
+				<footer>Aristotle</footer>
+			</blockquote>
+			<p>More than 2300 years after his death, Aristotle remains one of the most influential people who ever lived. 
+				He contributed to almost every field of human knowledge then in existence, and he was the founder of many 
+				new fields. According to the philosopher Bryan Magee, "it is doubtful whether any human being has ever 
+				known as much as he did". Among countless other achievements, Aristotle was the founder of formal logic,
+				pioneered the study of zoology, and left every future scientist and philosopher in his debt through his 
+				contributions to the scientific method.</p>
 		</div>
-	</div> <!-- #menu -->
+	</div> <!-- /.wrapper -->
+	<footer class="text-center">
+		<p>Code written by <a href="http://github.com/justinclagg" target="_blank">Justin Clagg</a>.
+		Icons from <a href="https://icons8.com" target="_blank">Icons8.</a></p>
+	</footer>
 </body>
 </html>

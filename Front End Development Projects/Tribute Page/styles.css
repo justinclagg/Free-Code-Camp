@@ -1,15 +1,24 @@
 
+html,
 body {
+	margin:0;
+	padding:0;
 	background-color: #BBB;
 	font-family: "Alegreya Sans", sans-serif;
 }
 
-#menu {
-	background-color: transparent;
-	margin-top: 210px;
+a,
+a:hover {
+	text-decoration: none;
+	color: #000;
 }
 
-#menu h1 {
+.wrapper {
+	background-color: transparent;
+	margin-top: 250px;
+}
+
+.wrapper h1 {
 	color: #FFF;
 	font-size: 70px;
 	font-weight: 100;
@@ -17,7 +26,7 @@ body {
 	padding-left: 7px;
 }
 
-#menu hr {
+.wrapper hr {
     border: 1px solid #FFF;
 	max-width: 350px;
 	margin-top: 0px;
@@ -84,4 +93,55 @@ body {
     animation-iteration-count: 1;
     animation-direction: normal;
     animation-delay: 0;
+}
+
+blockquote {
+	font-style: italic;
+}
+
+#aristotle-portrait {
+	float: left;
+	text-align: left;
+}
+
+#work-headings {
+	color: #000;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+#work-headings a,
+#work-headings a:hover {
+	color: #000;
+	text-decoration: none;
+	font-size: 22px;
+	font-weight: 300;
+	margin-left: 10px;
+	margin-right: 10px;
+	white-space: nowrap; /* Keeps icon and text together */
+}
+
+#work-headings > a > img {
+	border-radius: 50%;
+}
+
+.dropdown {
+	display: none;
+	text-align: left;
+}
+
+.active-dropdown {
+	display: block !important;
+}
+
+.active-icon {
+	background-color: #f39c12 !important;
+}
+
+footer {
+	display: none;
+	bottom: 0;
+	width: 100%;
+	background-color: transparent;
+	color: #FFF;
 }

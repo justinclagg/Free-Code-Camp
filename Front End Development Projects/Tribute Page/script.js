@@ -6,7 +6,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	/* Document status variables */
 	var menuRaised = false,
-		activePanel = false;
+		activePanel = false,
+		activeDropdown = "physics-dropdown",
+		activeIcon = "physics";
 
 	// Assigns a click event handler to each link that is a child of #tabs
 	// The HTMLCollection is passed as 'this' in order to use an Array.prototype method
@@ -34,6 +36,44 @@ document.addEventListener("DOMContentLoaded", function() {
 			setTimeout(function displayPanel() {
 				document.getElementById(activePanel).classList.add("active-panel");
 			}, 1200);
+		}
+	}
+
+	// Assigns a click event handler to each link that is a child of #work-headings
+	var workHeadings = document.getElementById("work-headings").getElementsByTagName("a");
+	Array.prototype.forEach.call(workHeadings, function addClickEvents(element) {
+		element.addEventListener("click", toggleDropdown);
+	});
+
+	// The click event handler for each dropdown textbox
+	// 'this' is the element that was clicked
+	function toggleDropdown() {
+		
+		if (activeDropdown === false) {
+			// Set the active dropdown and display it
+			activeDropdown = this.id + "-dropdown";
+			document.getElementById(activeDropdown).classList.add("active-dropdown");
+			// Change the corresponding icon background color
+			activeIcon = this.id;
+			document.getElementById(activeIcon).children.item(0).classList.add("active-icon");
+		}
+		else if (activeDropdown === this.id + "-dropdown"){
+			// Remove the currently active dropdown
+			document.getElementById(activeDropdown).classList.remove("active-dropdown");
+			activeDropdown = false;
+			// Remove the icon background color
+			document.getElementById(activeIcon).children.item(0).classList.remove("active-icon");
+			activeDropdown = false;
+		}
+		else if (activeDropdown) {
+			// Remove the currently active dropdown, then update and display the new active dropdown			
+			document.getElementById(activeDropdown).classList.remove("active-dropdown");
+			activeDropdown = this.id + "-dropdown";
+			document.getElementById(activeDropdown).classList.add("active-dropdown");		
+			// Remove the currently active icon background, add a background to the new icon
+			document.getElementById(activeIcon).children.item(0).classList.remove("active-icon");
+			activeIcon = this.id;
+			document.getElementById(activeIcon).children.item(0).classList.add("active-icon");			
 		}
 	}
 
