@@ -18,28 +18,25 @@ Code by Justin Clagg
 https://github.com/justinclagg
 */
 
+"use strict";
+
 function mutation(arr) {
 
-    var i, indexVal = 0;
-    var firstStr = "";    // Holds the first word
-    var secondArr = [];   // Holds the second word, split by letter in an array
-  
-    //Remove case dependency and assign first word to a string
-    firstStr = arr[0].toLowerCase();
-    // Split second word at each letter and assign to an array
-    secondArr = arr[1].toLowerCase().split("");
+	var firstWord = arr[0].toLowerCase();
+	var secondWord = arr[1].toLowerCase();
+	var secondArr = [...secondWord];
+	var index;
 
-    // Check if each letter in the second word appears in the first word
-    for (i = 0; i < secondArr.length; i++) {
-        // .indexOf() returns -1 if a letter from secondArr is not in firstStr
-        indexVal = firstStr.indexOf(secondArr[i], 0);
-        // If a letter is not found, return false
-        if (indexVal === -1) {
-            return false;
-        }
-    }
-    // Otherwise return true (all letters were found)
-    return true;
+	// Check if each letter in the second word appears in the first word
+	for (let i = 0; i < secondArr.length; i++) {
+		index = firstWord.indexOf(secondArr[i]);
+		// If any letter is not found, return false
+		if (index === -1) {
+			return false;
+		}
+	}
+	// Otherwise return true (all letters were found)
+	return true;
 }
 
 mutation(["hello", "hey"]);

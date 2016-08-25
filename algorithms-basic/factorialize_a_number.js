@@ -7,23 +7,25 @@ Code by Justin Clagg
 https://github.com/justinclagg
 */
 
-function factorialize(num) {
-  
-    var total = 1;
-  
-    if (num < 0) {   
-        return "You must select a positive integer.";
-    
-    } else if (num === 0) {  
-        return 1;
-    
-    } else {  
+"use strict";
 
-        for (var i = 1; i <= num; i++) {
-            total *= i;
-        }
-        return total;
-    } 
+function factorialize(num) {
+
+	if (num < 0) {
+		return "You must select a positive integer.";
+	}
+	else if (num === 0) {
+		return 1;
+	} 
+	else {
+		var factorial = 1;
+
+		for (let i = 2; i <= num; i++) {
+			factorial *= i;
+		}
+
+		return factorial;
+	}
 }
 
 factorialize(6);

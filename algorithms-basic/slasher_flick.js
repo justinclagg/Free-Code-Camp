@@ -9,12 +9,10 @@ Code by Justin Clagg
 https://github.com/justinclagg
 */
 
-function slasher(arr, howMany) {
+"use strict";
 
-    // .splice() modifies arr itself, removing howMany elements
-    arr.splice(0, howMany);
-  
-    return arr;
+function slasher(arr, howMany) {
+	return arr.slice(howMany);
 }
 
 slasher([1, 2, 3], 2);

@@ -9,12 +9,11 @@ Code by Justin Clagg
 https://github.com/justinclagg
 */
 
+"use strict";
+
 function reverseString(str) {
-  var array = str.split('');  
-  array.reverse();
-  str = array.join('');
-  // Can be combined as str.split('').reverse().join('');
-  return str;
+	var reverseArr = [...str].reverse();
+	return reverseArr.join("");
 }
 
 reverseString("hello world");

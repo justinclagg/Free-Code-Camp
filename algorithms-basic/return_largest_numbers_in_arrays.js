@@ -9,24 +9,25 @@ Code by Justin Clagg
 https://github.com/justinclagg
 */
 
+"use strict";
+
 function largestOfFour(arr) {
 
-    var i, k = 0;
-    var largeArray = [];    // Contains the largest number from each sub-array
-    var largeNum = 0;       // Current largest number
-  
-    for (i = 0; i < arr.length; i++) {
-        // Initialize as the first element of the sub-array
-        largeNum = arr[i][0];
-        // Record the largest number in the sub-array
-        for (k = 1; k < arr[i].length; k++) {
-            if (arr[i][k] > largeNum) {
-                largeNum = arr[i][k];
-            }   
-        }
-        largeArray[i] = largeNum;
-    }
-    return largeArray;
+	var largestArray = []; // Contains the largest number from each sub-array
+	var largestNum = 0; // Current largest number
+
+	for (let i = 0; i < arr.length; i++) {
+		largestNum = arr[i][0];
+		// Record the largest number in the sub-array
+		for (let k = 1; k < arr[i].length; k++) {
+			if (arr[i][k] > largestNum) {
+				largestNum = arr[i][k];
+			}   
+		}
+		largestArray[i] = largestNum;
+	}
+	
+	return largestArray;
 }
 
 largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);

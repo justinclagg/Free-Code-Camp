@@ -8,20 +8,21 @@ Code by Justin Clagg
 https://github.com/justinclagg
 */
 
+"use strict";
+
 function findLongestWord(str) {
-  // Create an array of the words in the string.
-  var strArray = str.split(' ');
-  // Convert each word into its length value.
-  strArray = strArray.map(function(val){
-    val = val.length;
-    return val;
-  });
-  // Sort the length numbers from largest to smallest.
-  strArray = strArray.sort(function(a, b) {
-    return b - a;
-  });
-  // The first element of the array will be the longest length. 
-  return strArray[0];
+
+	var words = str.split(" ");
+	var longest = 0;
+	
+	// Determine which word has the longest length
+	words.forEach((word) => {
+		if (word.length > longest) {
+			longest = word.length;
+		}
+	});
+
+	return longest;
 }
 
 findLongestWord("The quick brown fox jumped over the lazy dog");

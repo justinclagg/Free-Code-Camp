@@ -7,32 +7,32 @@ length (second argument). Return the truncated string with a "..." ending.
 
 Note that the three dots at the end add to the string length.
 
-If the num is less than or equal to 3, then the length of the three dots is
+If the max is less than or equal to 3, then the length of the three dots is
 not added to the string length.
 
 Code by Justin Clagg
 https://github.com/justinclagg
 */
 
-function truncate(str, num) {
+"use strict";
 
-    truncStr = "";    // Truncated version of the input string
-  
-    if (num < 0) {    // num must be positive
-        return "Please enter a non-negative number.";
-      
-    } else if (num >= str.length) {    // str doesn't need to be truncated
-        truncStr = str;
-      
-    } else if (num <= 3) {    // truncate, but don't include ellipsis in string length
-        // .slice() does not include the end point
-        truncStr = str.slice(0, num) + "...";
-      
-    } else {    // truncate, including ellipsis in string length
-        truncStr = str.slice(0, num - 3) + "...";
-    }
-  
-    return truncStr;
+function truncate(str, max) {
+	// Invalid input
+	if (max < 0) {
+		return "Please enter a non-negative maxber.";
+	}
+	// No truncation needed
+	else if (max >= str.length) {
+		return str;
+	}
+	// Truncate, don't include ellipsis in length
+	else if (max <= 3) {
+		return str.slice(0, max) + "...";
+	}
+	// Truncate and include ellipsis in length
+	else {
+		return str.slice(0, max - 3) + "...";
+	}
 }
 
 truncate("A-tisket a-tasket A green and yellow basket", 11);

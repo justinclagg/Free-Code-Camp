@@ -16,30 +16,19 @@ Code by Justin Clagg
 https://github.com/justinclagg
 */
 
-function where(arr, num) {
+"use strict";
 
-    var i;
-    var lowIndex = 0;    // lowest index that num could be inserted
-  
-    // Sort the array from smallest to largest
-    arr.sort(function(a, b) {
-        return a - b; 
-    });
-  
-    // Check each sorted element until arr[i] is larger than num
-    for (i = 0; i < arr.length; i++) {
-      
-        if (arr[i] < num) {
-            // lowIndex must be set after an element lower than num
-            lowIndex = i + 1;
-        } else {
-            // The for loop ends when arr[i] >= num
-            return lowIndex;
-        }
-    }
-  
-    // Returns if no elements are larger than num
-    return lowIndex;
+function where(arr, num) {
+	// Sort the array from smallest to largest
+	arr.sort((a, b) => a - b);
+    // Check each sorted element until arr[i] >= num
+	for (let i = 0; i < arr.length; i++) {
+		if (arr[i] >= num) {
+			return i;
+		}
+	}
+    // num goes at the end of the array if no elements are larger
+	return arr.length;
 }
 
 where([2, 5, 10], 15);

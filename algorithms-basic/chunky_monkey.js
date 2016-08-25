@@ -9,16 +9,18 @@ Code by Justin Clagg
 https://github.com/justinclagg
 */
 
+"use strict";
+
 function chunk(arr, size) {
 
-  var i = 0;
-  var chunkArr = [];    // Multidimensional array consisting of each sliced array
-  
-  for (i = 0; i < arr.length; i + size) {
-    // Splice an array of length size and add it to chunkArr
-    chunkArr.push(arr.splice(i, i + size));
-  }
-  return chunkArr;
+	var chunkArr = []; // Multidimensional array consisting of each sliced array
+
+	// Copy arrays of length size and push to chunkArr
+	for (let i = 0; i < arr.length; i += size) {
+		chunkArr.push(arr.slice(i, i + size));
+	}
+
+	return chunkArr;
 }
 
 chunk([0, 1, 2, 3, 4, 5, 6], 3);

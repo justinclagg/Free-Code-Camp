@@ -10,17 +10,16 @@ Code by Justin Clagg
 https://github.com/justinclagg
 */
 
+"use strict";
+
 function palindrome(str) {
-  // Remove all capitalization
-  str = str.toLowerCase();
-  // Remove everything except letters. \s+ - whitespace | \W+ - symbols | _ underscore is considered alphanumeric must be removed separately
-  str = str.replace(/[\s+ \W _]/g, '');
-  // Define bwStr as the reverse of str.
-  var bwStr = str.split('').reverse().join('');
-  // Check if str is the same backwards.
-  return str === bwStr;
+	// Switch to lowercase, remove non-alphanumeric characters
+	// whitespace \s+ | \W+ - non-alphanumeric | _ underscore is considered alphanumeric, must be removed separately
+	var fwStr = str.toLowerCase().replace(/[\s+\W+_]/g, "");
+	// Reverse the string and check for a palindrome
+	var bwStr = [...fwStr].reverse().join("");
+	
+	return fwStr === bwStr;
 }
 
-
-palindrome("0_0 (: /-\ :) 0-0");
-
+palindrome("A man, a plan, a canal. Panama");

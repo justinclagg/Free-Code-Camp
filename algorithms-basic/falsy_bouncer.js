@@ -9,18 +9,11 @@ Code by Justin Clagg
 https://github.com/justinclagg
 */
 
+"use strict";
+
 function bouncer(arr) {
-  
-    var filtArr = [];
-  
-    filtArr = arr.filter(function(val) {
-        // .filter() removes elements that cause the callback function
-        // to return false. This removes falsy values from arr.
-        return val;
-    });
-  
-    return filtArr;
-  
+	// Falsy values will coerce to false in the filter function
+	return arr.filter(val => val);
 }
 
 bouncer([7, "ate", "", false, 9]);

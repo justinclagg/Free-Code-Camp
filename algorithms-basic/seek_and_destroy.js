@@ -10,30 +10,15 @@ Code by Justin Clagg
 https://github.com/justinclagg
 */
 
-function destroyer(arr) {
-  
-    var i = 0; 
-    var filtArr = arr;   // Create a copy of the initial array to be filtered
-  
-    // Remove a given value arg from an array arr
-    function removeArg(arr, arg) {
-        
-        arr = arr.filter(function (val) {
-            return val !== arg;    // Returns false for values of arr that are equal to arg, removing them
-        });
-      
-        return arr;
-    }
-      
-    // Call the removeArg function once for each extra argument
-    // Skip the first argument, which is arr
-    for (i = 1; i < arguments.length; i++) {    // arguments.length is the number of arguments passed
-        
-        filtArr = removeArg(filtArr, arguments[i]);
-    }
+"use strict";
 
-    return filtArr;
+function destroyer(arr, ...remove) {
+	// For each argument passed after arr, remove all occurances of it within arr
+	remove.forEach(arg => {
+		arr = arr.filter(val => arg !== val);
+	});
+
+	return arr;
 }
 
-// Extra arguments can be passed, even though the function only asks for one
 destroyer([1, 2, 3, 1, 2, 3], 2, 3);

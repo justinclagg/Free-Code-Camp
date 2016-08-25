@@ -1,6 +1,6 @@
-# FreeCodeCamp
+# Free Code Camp
 
-In this repository I will be adding my work from [freeCodeCamp](https://www.freecodecamp.com) challenges. FreeCodeCamp consists of projects that require the use of algorithms, front end development, and back end development.
+In this repository I will be adding my Javscript algorithm solutions from <a href="https://www.freecodecamp.com" target="_blank">Free Code Camp</a> challenges.
 
 ## My Progress:
 

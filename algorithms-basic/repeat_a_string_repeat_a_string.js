@@ -9,18 +9,20 @@ Code by Justin Clagg
 https://github.com/justinclagg
 */
 
+"use strict";
+
 function repeat(str, num) {
 
-    var i = 0;
-    var repeatStr = "";
-  
-    // If num is positive, add str to repeatStr num times
-    if (num >= 0) {
-        for (i = 0; i < num; i++) {
-            repeatStr += str;
-        }  
-    }
-    return repeatStr;
+	var repeatStr = "";
+
+	// If num is positive, add str to repeatStr num times
+	if (num >= 0) {
+		for (let i = 0; i < num; i++) {
+			repeatStr += str;
+		}  
+	}
+
+	return repeatStr;
 }
 
 repeat("abc", 3);
